@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>Регистрациия</title>
+</head>
+<body>
+    <section>
+        <article id="enterBlock">
+            <div id="enterBlockContainer">
+                <form method="POST" action="" name="enterForm" onsubmit="return false">
+                    <label>Логин:</label>
+                    <input type="text" name="login" required><br/>
+
+                    <label>Пароль:</label>
+                    <input type="password" name="password" required><br/>
+
+                    <input type="submit" value="Войти" onclick="enterClick()">
+                </form>
+            </div>
+            <div id="regBlockContainer" class="hidden">
+                <form method="POST" action="" name="regForm" onsubmit="return false">
+                    <label>Имя:</label>
+                    <input type="text" name="name" required><br/>
+
+                    <label>Логин:</label>
+                    <input type="text" name="login" required><br/>
+
+                    <label>Пароль:</label>
+                    <input type="password" name="password" required><br/>
+
+                    <label>Повторите пароль:</label>
+                    <input type="password" name="repeat_password" required><br/>
+
+                    <input type="submit" value="Войти" onclick="regClick()">
+                </form>
+            </div>
+            <div class="buttonsContainer">
+                <button onclick="enterButtonClick()">Вход</button>
+                <button onclick="regButtonClick()">Регистрация</button>
+            </div>
+        </article>
+        <article id="success" class="hidden">
+            <div id="successContent">
+
+            </div>
+            <button onclick="exitButton()">Выйти</button>
+        </article>
+    </section>
+</body>
+</html>
